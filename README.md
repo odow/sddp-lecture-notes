@@ -2,19 +2,14 @@
 
 1. Download and install Julia from https://julialang.org/downloads/
 2. Move the contents of this folder somewhere memorable, e.g., `~/Documents/large-scale`
-3. Open Julia. You have two options.
-    - Via the command line (`terminal`, `cmd.exe`, etc.)
-    ```
-    cd ~/Documents/large-scale
-    julia --project=.
-    ```
-    - By opening the Julia REPL (e.g., from application folder, program menu etc.)
+3. Open Julia (e.g., from application folder, program menu etc.), then run
     ```
     cd("~/Documents/large-scale")
     import Pkg
     Pkg.activate(".")
+    Pkg.instantiate()
     ```
-4. Open IJulia:
+4. Now open IJulia:
     ```
     julia> using IJulia
     julia> IJulia.notebook(dir=".")
